@@ -6,7 +6,7 @@ const port = process.env.PORT || 8080;
 const app = express();
 
 // Statically serve public folder
-app.use( '/public', express.static( path.join( __dirname, 'public') ));
+app.use( '/public', express.static( path.join( __dirname, '../public') ));
 
 // Make sure any routes direct them to the index page
 app.get('*', (req,res) => {

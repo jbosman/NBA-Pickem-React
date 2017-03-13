@@ -1,0 +1,9 @@
+.nav-tabs {
+    text-align:center;
+    font-size: 172%;
+}
+
+.nav-tabs > li {
+    float:none;
+    display:inline-block;
+}

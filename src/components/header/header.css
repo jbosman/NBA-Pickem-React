@@ -1,0 +1,10 @@
+.navbar{
+	background: linear-gradient( 90deg, #0837B6 50%, #F64657 50%);
+	height: 10vh;
+}
+
+.navBarImg {
+	display: block;
+	margin: auto;
+	height: 9vh;
+}

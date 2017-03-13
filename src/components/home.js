@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import Header from './header/header';
+import TabMenu from '../containers/tabMenu/tabMenu';
 
 export default class Home extends Component {
 	render(){
 		return (
 			<div>
-				<div>This is the Menu</div>
-				{ this.props.children }
+				<Header />
+				<div className='container' >
+					<TabMenu />
+					{ this.props.children }
+				</div>
 			</div>
 		)
 	}
