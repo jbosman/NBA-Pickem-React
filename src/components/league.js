@@ -1,9 +1,42 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux'; 
+import { Link } from 'react-router';
+import { fetchLeague } from '../actions/league.action';
+import { selectTeam } from '../actions/team.action';
 
-const League = () => {
-	return (
-		<div>This is the league component.</div>
-	)
+class League extends Component {
+	componentWillMount(){
+		this.props.fetchLeague();  
+	}
+
+	updateTeam(teamId){
+		this.props.selectTeam(teamId);
+	}
+
+	renderTeamsInLeague(){
+		return (
+			this.props.teams.map( (team, i) => {
+				return (
+					<li onClick={this.updateTeam.bind(this, i)} key={i}> { team.name }'s Team</li>
+				)
+			})
+		)
+	}
+
+	render() {
+
+		if(this.props.teams.length < 1) return <div>Loading...</div>
+
+		return (
+			<div>
+				<ul>{ this.renderTeamsInLeague() }</ul>
+			</div>
+		)
+	}
 }
 
-export default League;
+function mapStateToProps(state){
+	return { teams: state.league.all };
+}
+
+export default connect( mapStateToProps, { fetchLeague, selectTeam } )(League);
