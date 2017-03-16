@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 class TeamView extends Component {
 
 	renderNBATeams(){
-		console.log(this.props.team)
 		return (
 		 	this.props.team.nba_teams.map( (nbaTeam, i) => {
 		 		return <li key={i}> { nbaTeam } </li>;

@@ -8,7 +8,7 @@ class TabMenu extends Component {
 	getTabMenuDetails(){
 		return [
 			{ label: 'League', link: '/' },
-			{ label: 'Team', link: '/selected' },
+			{ label: 'Team', link: '/team' },
 			{ label: 'NBA Standings', link: '/nba/standings' }
 		]
 	}

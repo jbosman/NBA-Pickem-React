@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 import { connect } from 'react-redux'; 
 import { Link } from 'react-router';
 import { fetchLeague } from '../actions/league.action';
 import { selectTeam } from '../actions/team.action';
 
 class League extends Component {
+
 	componentWillMount(){
 		this.props.fetchLeague();  
 	}
 
 	updateTeam(teamId){
 		this.props.selectTeam(teamId);
+		browserHistory.push('/team');
 	}
 
 	renderTeamsInLeague(){

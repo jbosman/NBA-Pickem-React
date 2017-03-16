@@ -9,7 +9,7 @@ import NBAStandingsView from './containers/nba-standings-view';
 export default (
 	<Route path='/' component= { Home } >
 		<IndexRoute component= { League } />
-		<Route path='/selected' component= { TeamView } />
+		<Route path='/team' component= { TeamView } />
 		<Route path='/nba/standings' component= { NBAStandingsView } />
 	</Route>
 );
