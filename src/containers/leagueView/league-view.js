@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import { connect } from 'react-redux'; 
 import { Link } from 'react-router';
-import { fetchLeague } from '../actions/league.action';
-import { selectTeam } from '../actions/team.action';
-import { fetchNBATeamInfo } from '../actions/nba.team.action';
+import { fetchLeague } from '../../actions/league.action';
+import { selectTeam } from '../../actions/team.action';
+import { fetchNBATeamInfo } from '../../actions/nba.team.action';
 import _ from 'lodash';
 
 class League extends Component {
