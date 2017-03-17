@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
 import Home from './components/home';
-import League from './components/league'; 
+import League from './containers/league-view'; 
 import TeamView from './containers/team-view';
 import NBAStandingsView from './containers/nba-standings-view';
 
