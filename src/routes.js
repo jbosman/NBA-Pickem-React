@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import Root from './components/root';
+import Root from './components/root/root';
 import League from './containers/league-view'; 
 import TeamView from './containers/team-view';
 import NBAStandingsView from './containers/nba-standings-view';
