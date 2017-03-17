@@ -19,7 +19,7 @@ class NBAStandingsView extends Component {
 					<div className='col-lg-6'>
 						{ nbaTeam.name }
 					</div>
-					<div className='col-lg-6'>
+					<div className='col-lg-6 wins'>
 						{ nbaTeam.wins }
 					</div>
 				</div>

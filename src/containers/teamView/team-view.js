@@ -22,7 +22,7 @@ class TeamView extends Component {
 			 			<div className='col-lg-6'>
 			 				{ nbaTeam.name }
 			 			</div>
-			 			<div className='col-lg-6'>
+			 			<div className='col-lg-6 wins'>
 			 				{ nbaTeam.wins }
 			 			</div>
 			 		</div>
@@ -39,7 +39,7 @@ class TeamView extends Component {
 		return (
 			<div className='row'>
 				<div id='totalWinsText' className='col-lg-6'>Total Wins: </div>
-	 			<div id='winsNumber' className='col-lg-6'>{ sumOfTeamWins }</div>
+	 			<div id='winsNumber' className='col-lg-6 wins'>{ sumOfTeamWins }</div>
 			</div>
 		)
 	}

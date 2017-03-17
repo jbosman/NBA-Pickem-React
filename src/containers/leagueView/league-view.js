@@ -44,7 +44,7 @@ class League extends Component {
 						<div className='col-lg-6'> 
 							<a onClick={this.updateTeam.bind(this, team.leagueId)}>{ team.name }'s Team</a>
 						</div>
-						<div className='col-lg-6'>
+						<div className='col-lg-6 wins'>
 							{ team.wins }
 						</div>
 					</div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../header/header';
 import TabMenu from '../../containers/tabMenu/tabMenu';
+import './childrenViews.css';
 
 export default class Root extends Component {
 	render(){
