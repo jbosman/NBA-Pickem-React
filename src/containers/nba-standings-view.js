@@ -13,7 +13,6 @@ class NBAStandingsView extends Component {
 
 		let NBA_teams_sorted = _.orderBy( NBA_teams_objs, "wins", "desc");
 
-
 		return NBA_teams_sorted.map( (nbaTeam, i) => {
 			return (
 				<div className='row' key={i}>
