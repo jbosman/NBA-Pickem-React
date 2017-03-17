@@ -2,7 +2,7 @@ import React, { Component } from 'React';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import './team.view.css';
-import nbaLogos from '../../../assests/nbaLogos/teams-nba-sprite.png';
+import NBA_Team_Row from '../../components/nbaTeamRow/nba.team.row';
 
 class TeamView extends Component {
 
@@ -19,22 +19,7 @@ class TeamView extends Component {
 
 		return (
 		 	team_NBA_teams_objs_sorted.map( (nbaTeam, i) => {
-		 		let imgClass = `col-lg-4 ${nbaTeam.abbr}`;
-		 		let imgStyle = { backgroundImage: `url(${nbaLogos})` }
-		 		return (
-		 			<div className='row' key={i} >
-		 				<div 
-		 					className={imgClass} 
-		 					style={imgStyle}>
-		 				</div>
-			 			<div className='col-lg-4'>
-			 				{ nbaTeam.name }
-			 			</div>
-			 			<div className='col-lg-4 wins'>
-			 				{ nbaTeam.wins }
-			 			</div>
-			 		</div>
-		 		)
+		 		return <NBA_Team_Row team={nbaTeam} key={nbaTeam.abbr} />
 			})
 		)
 	}
