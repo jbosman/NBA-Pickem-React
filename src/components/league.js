@@ -56,7 +56,6 @@ class League extends Component {
 }
 
 function mapStateToProps(state){
-	console.log('state: ', state)
 	return { 
 		teams: state.league.league_teams,
 		nba_teams_info:  state.league.nba_teams_info

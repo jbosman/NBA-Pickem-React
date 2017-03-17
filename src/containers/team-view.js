@@ -1,18 +1,29 @@
 import React, { Component } from 'React';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 
 class TeamView extends Component {
 
 	renderNBATeams(){
+
+		// Create an array of objects that contains the individual's teams' info
+		// Each obj contains the nba team name and it's number of wins i.e. { name: '...', wins: 72 }
+		let team_NBA_teams_objs = this.props.team.nba_teams.map( (nbaTeam, i) => {
+			return this.props.nba_teams_info[nbaTeam];
+		})
+
+		// Sort those objects by wins to be displayed in descending order
+		let team_NBA_teams_objs_sorted = _.orderBy( team_NBA_teams_objs, "wins", "desc" )
+
 		return (
-		 	this.props.team.nba_teams.map( (nbaTeam, i) => {
+		 	team_NBA_teams_objs_sorted.map( (nbaTeam, i) => {
 		 		return (
-		 			<div className='row'>
+		 			<div className='row' key={i} >
 			 			<div className='col-lg-6'>
-			 				{ this.props.nba_teams_info[nbaTeam].name }
+			 				{ nbaTeam.name }
 			 			</div>
 			 			<div className='col-lg-6'>
-			 				{ this.props.nba_teams_info[nbaTeam].wins }
+			 				{ nbaTeam.wins }
 			 			</div>
 			 		</div>
 		 		)
@@ -26,7 +37,10 @@ class TeamView extends Component {
 		}, 0)
 
 		return (
-			<div>Total Wins: { sumOfTeamWins }</div>
+			<div className='row'>
+				<div id='totalWinsText' className='col-lg-6'>Total Wins: </div>
+	 			<div id='winsNumber' className='col-lg-6'>{ sumOfTeamWins }</div>
+			</div>
 		)
 	}
 
@@ -34,10 +48,10 @@ class TeamView extends Component {
 		if( !this.props.team ) return <div>First select a team from the League tab.</div>
 		
 		return (
-			<div class='container'>
+			<div className='container'>
 				<h1>{ this.props.team.name }'s Team</h1>
 				<div>{ this.renderNBATeams() }</div>
-				<div className='totalWins'>{ this.renderTeamWinsTotal() }</div>
+				<div>{ this.renderTeamWinsTotal() }</div>
 			</div>
 		)
 	}

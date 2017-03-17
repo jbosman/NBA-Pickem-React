@@ -12,7 +12,6 @@ export default function( state = INITIAL_STATE, action ){
 		case SELECT_TEAM:
 			return Object.assign( {}, state, { selectedTeam: state.league_teams[action.payload] });
 		case NBA_TEAM_WINS_FETCH:
-			console.log('making state: ', scrapeESPN_HTML(action.payload.data))
 			return Object.assign( {}, state, { nba_teams_info: scrapeESPN_HTML(action.payload.data) } )
 		default:
 			return state;
