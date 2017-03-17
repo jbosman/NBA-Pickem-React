@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import Home from './components/home';
+import Root from './components/root';
 import League from './containers/league-view'; 
 import TeamView from './containers/team-view';
 import NBAStandingsView from './containers/nba-standings-view';
 
 export default (
-	<Route path='/' component= { Home } >
+	<Route path='/' component= { Root } >
 		<IndexRoute component= { League } />
 		<Route path='/team' component= { TeamView } />
 		<Route path='/nba/standings' component= { NBAStandingsView } />

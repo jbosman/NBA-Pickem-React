@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './header/header';
 import TabMenu from '../containers/tabMenu/tabMenu';
 
-export default class Home extends Component {
+export default class Root extends Component {
 	render(){
 		return (
 			<div>
