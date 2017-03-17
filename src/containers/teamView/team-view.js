@@ -1,6 +1,7 @@
 import React, { Component } from 'React';
 import { connect } from 'react-redux';
 import _ from 'lodash';
+import './team.view.css';
 
 class TeamView extends Component {
 
@@ -48,7 +49,7 @@ class TeamView extends Component {
 		if( !this.props.team ) return <div>First select a team from the League tab.</div>
 		
 		return (
-			<div className='container'>
+			<div className='container teamView'>
 				<h1>{ this.props.team.name }'s Team</h1>
 				<div>{ this.renderNBATeams() }</div>
 				<div>{ this.renderTeamWinsTotal() }</div>
