@@ -9,7 +9,9 @@ export default class Home extends Component {
 				<Header />
 				<div className='container' >
 					<TabMenu />
+					<div className='container'>
 					{ this.props.children }
+					</div>
 				</div>
 			</div>
 		)
