@@ -1,0 +1,43 @@
+$NBA_TEAMS: ( 
+'.ATL',
+'.BOS',
+'.NO',
+'.CHI',
+'.CLE',
+'.DAL',
+'.DEN',
+'.DET',
+'.GS',
+'.HOU',
+'.IND',
+'.LAC',
+'.LAL',
+'.MIA',
+'.MIL',
+'.MIN',
+'.BKN',
+'.NY',
+'.ORL',
+'.PHI',
+'.PHX',
+'.POR',
+'.SAC',
+'.SA',
+'.OKC',
+'.UTAH',
+'.WSH',
+'.TOR',
+'.MEM',
+'.CHA',
+);
+
+$vIncrement: -100;
+
+@each $team in $NBA_TEAMS {
+	#{$team} {
+  	background-repeat: no-repeat;
+  	height: 50px;
+  	background-position: 90% #{ (index($NBA_TEAMS, $team) - 1) * $vIncrement}px;
+  	align: center;
+  }
+}

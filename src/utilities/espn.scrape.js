@@ -9,7 +9,7 @@ export function scrapeESPN_HTML(nbaPage){
 	}
 
 	nbaTeamsInfo.forEach( (teamInfo) => {
-		nbaTeamObj[teamInfo.abbr] = { name: teamInfo.name, wins: Number(teamInfo.wins)  };
+		nbaTeamObj[teamInfo.abbr] = { abbr: teamInfo.abbr, name: teamInfo.name, wins: Number(teamInfo.wins)  };
 	})
 
 

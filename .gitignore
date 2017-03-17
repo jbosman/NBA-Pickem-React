@@ -1,5 +1,7 @@
 .DS_Store
 npm-debug.log
+.sass-cache
+nbaLogos.css.map
 
 node_modules
 public
